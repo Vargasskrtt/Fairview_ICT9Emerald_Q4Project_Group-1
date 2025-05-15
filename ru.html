@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Fairview_ICT9Emerald_Q4Project</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        
+        body {
+
+            background-image: linear-gradient(pink, white); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; font-family: 'Times New Roman', serif;
+
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .bck {
+
+            background-color: rgba(255, 255, 255, 0.4); padding: 20px; border-radius: 20px; margin: 20px; 
+
+        }
+
+        .bck2 {
+
+            background-color: rgba(0, 0, 0, 0.2); padding: 20px; border-radius: 20px; margin: 20px; 
+
+        }
+
+        .bck3 {
+
+            background-color: rgba(255, 255, 255, 0.4); padding: 20px; border-radius: 20px; margin: 20px; width: 400px; height: 60px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-danger navbar-danger fixed-top">
+        
+        <div class="container-fluid">
+            
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcHVuqgJPs1mFipnjsVwsFIYiYwTaulS-1_w&s" class="rounded circle mx-auto d-block" style="width: 50px; height: 50px;">
+
+            <div class="collapse navbar-collapse">
+                
+                <ul class="navbar-nav me-auto">
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="index.html"><button class="btn btn-outline-light">About Us!</button></a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="qtr1.html"><button class="btn btn-outline-light">Quarter 1</button></a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="qtr2.html"><button class="btn btn-outline-light">Quarter 2</button></a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="qtr3.html"><button class="btn btn-outline-light">Quarter 3</button></a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="qtr4.html"><button class="btn btn-outline-light">Quarter 4</button></a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="wn.html"><button class="btn btn-outline-light">What's Next?</button></a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="ru.html"><button class="btn btn-outline-light">Rate Us!</button></a>
+
+                    </li>
+
+                </ul>
+
+                <form class="d-flex">
+                    
+                    <input class="form-control" type="text" placeholder="Search..." style="margin-right: 20px;">
+                    <button class="btn btn-active btn-light" type="button">Search</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <center>
+    <h1 style="margin-top: 100px;">Rate Our Website!</h1>
+
+    <div class="col-md-8">
+        <details ontoggle="message()">
+            <summary>What to do:</summary>
+                <p>Choose your rating between 1 to 5 for each aspect of the project.</p>
+            </summary>
+        </details>
+
+<form>
+    <!-- Rate 1 to 5 -->
+    <label for="rate" id="design" style="background-color:">Design</label> 
+                <select id="ratingdes" name="rating">
+                    <option id="1" value="1">1</option>
+                    <option id="2" value="2">2</option>
+                    <option id="3" value="3">3</option>
+                    <option id="4" value="4">4</option>
+                    <option id="5" value="5">5</option>
+                </select>
+                <br><br>
+
+    <label for="rate" id="function" style="background-color:">Functionality</label> 
+                <select id="ratingfunc" name="rating">
+                    <option id="1a" value="1">1</option>
+                    <option id="2a" value="2">2</option>
+                    <option id="3a" value="3">3</option>
+                    <option id="4a" value="4">4</option>
+                    <option id="5a" value="5">5</option>
+                </select>
+                <br><br>
+
+    <label for="rate" id="Comprehensiveness" style="background-color:">Comprehensiveness</label> 
+                <select id="ratingcom" name="rating">
+                    <option id="1b" value="1">1</option>
+                    <option id="2b" value="2">2</option>
+                    <option id="3b" value="3">3</option>
+                    <option id="4b" value="4">4</option>
+                    <option id="5b" value="5">5</option>
+                </select>
+                <br><br>
+
+    </form>
+
+    <!-- Add your input and feedback -->
+    <label id="userInputField">Please give us your feedback!</label>
+    <br><br>
+
+    <textarea rows="4" cols="145" placeholder="Type your answer here..." class="form-control" required></textarea>
+    <br><br>
+
+    <button type="Submit" class="btn btn-success" onclick="score()">Submit Feedback</button>
+
+
+</div>
+</center>
+
+    <script>
+     function score() {
+     var des = document.getElementById('ratingdes').value; // score for design
+     var func = document.getElementById('ratingfunc').value; // score for functionality
+     var com = document.getElementById('ratingcom').value; // score for comprehensiveness
+
+     var Avg = ((parseInt(des) + parseInt(func) + parseInt(com)) / 3).toFixed(2);
+
+    
+       if (Avg <= 5 && Avg > 4) {
+
+             window.alert("Thank you for rating our site highly!");
+
+         }
+
+         else if (Avg <= 4 && Avg > 3) {
+
+             window.alert("Thank you for rating our site in high regards!");
+
+         }
+
+         else if (Avg <= 3 && Avg > 2) {
+
+             window.alert("Thank you for rating our site!");
+
+         }
+
+         else {
+
+             window.alert("Thank you and we hope we can improve our site!");
+
+         }
+    }
+
+
+    </script>
+
+<div class="bck2">
+        
+        <a href="https://www.instagram.com/obmontessoriofficial/">OBMC official account on instagram!</a>
+
+        <a href="https://www.facebook.com/obmcofficial">OBMC official account on facebook!</a>
+
+        <a href="https://obmontessori.edu.ph/?fbclid=IwY2xjawKSC6NleHRuA2FlbQIxMABicmlkETFqY01jeHRIVWd6dHJXVlQ0AR43OOlXGXFeC_E48ruPm6_MU93jEuyxnqiprDijD6q1JYxUzevDCn7u1h15WQ_aem_dKVHszPqPlnqGle2TkXJ0A">OBMC official website!</a>
+
+    </div>
+</body>
+
+</html>
