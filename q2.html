@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <title>Q4QUIZ2</title>
+</head>
+<body>
+    <style>
+    body{
+        background-color:#f0dd8e;
+        background-size: cover;
+    }
+</style>
+    <center>
+        <br>
+    <p><span style="color: white; font-size: 39px; font-family:monospace ;background-color:#e5c234";>Score Analyzer</span></p>
+    <details ontoggle="message1">
+            <br>
+            <summary>
+                <u><span style="color: white; font-size: 29px; font-family:monospace";>Instructions</span></u>
+                <br>
+                <i id="message">Enter your grades in the following subjects</i>
+            </summary>
+        </details>
+    <br>
+    <br>
+    <style>
+        .container{
+        justify-content: center;
+            column-gap: 50px;
+            display: flex;
+    }
+    </style>
+    <div class="container1">
+    <img src="https://img.freepik.com/free-vector/colorful-science-objects-icons-vector-set_1308-140707.jpg" with="260" height="230"><br>
+    <input type="number" class="form-control" id="Science">
+<br><br>
+<div class="container4">
+    <img src="https://media.istockphoto.com/id/1472388193/vector/%C3%B0%C3%B1%C3%B0%C3%B1%C3%B0%C3%B0%C2%BA%C3%B0-%C3%B0-%C3%B0%C3%B0%C3%B0%C3%B1%C3%B1%C3%B1%C3%B1%C3%B0%C3%B1%C3%B0%C3%B0.jpg?s=612x612&w=0&k=20&c=XYOHpk7klwC8lbHflVtxlHsgbXEwdAv4T3ITIXMPeQg=" with="260" height="230"><br>
+    <input type="number" class="form-control" id="Math">
+<br><br>
+<div class="container3">
+    <img src="https://static.vecteezy.com/system/resources/previews/017/300/766/non_2x/learning-english-doodle-set-language-school-in-sketch-style-online-language-education-course-hand-drawn-illustration-isolated-on-white-background-vector.jpg" with="260" height="230"><br>
+    <input type="number" class="form-control" id="English">
+    <br>
+    <br>
+    <button type="button" class="btn btn-success" onclick="RndResult()">Calculate</button>
+    <script>
+          function showResult(){
+var Science = document.getElementById('science').value; // science grade
+var Math = document.getElementById('math').value; // math grade
+var English = document.getElementById('english').value; // english grade
+ var general= ((science + math + english) / 3).toFixed(2) ;
+
+
+ switch(true){
+case (general >= 94 && gen <=100):
+    alert("Excellent");
+    break;
+case (general >=87 && gen <=93.99):
+    alert("Above Satisfactory");
+    break;
+case (general >=80&& gen <=86.99 ):
+    alert("Satisfactory");
+    break;
+case (general >=75 && gen <=79.99 ):
+    alert("Needs Improvement");
+    break;
+default:
+    alert("Poor")
+
+    }
+    </script>
+<p>Janine R. Mariposque</p>
+<a href=https://docs.google.com/document/d/15eSWsQWmvlisJYnfSePZl0euP_mJ553ip_Uwe1wTaHw/edit?usp=sharing></a>
+</body>
+</html>
